@@ -12,7 +12,6 @@ def possible_formations(N, K):
     results = []
     for i in range(1, (N//K)+1):
         li = [seq for seq in itertools.combinations_with_replacement(roi, i) if sum(seq)==N]
-        # itertools.chain(results, li)
         results += li
     return len(results)        
 
